@@ -9,6 +9,7 @@ const emps = [
 
 const table = document.querySelector('#table');
 
+
 const headerRow = document.createElement('tr'); // header row
 
 const headerColName = document.createElement('th');
