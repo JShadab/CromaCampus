@@ -1127,7 +1127,14 @@ to access all key-value pairs we can use for-in loop
 
 Example:
 ------------
-var nums ={fno:100, sno: 200, tno: 300}
+var nums = { fno: 100, sno: 200, tno: 300 }
+
+        for(key in nums){
+            console.log(key); // KEY
+            console.log(nums[key]); // VALUE
+
+            console.log(key +" : "+nums[key]); // KEY : VALUE
+        }
 
 LAB:
 -------
@@ -1140,6 +1147,75 @@ print the array,
 sort the array on the basis of student age
 
 print the sorted array.
+
+Solution:
+------------
+var stud1 = { name: 'Abc', age: 21, course: 'Java' }
+var stud2 = { name: 'Kbc', age: 19, course: 'Html' }
+var stud3 = { name: 'Xyz', age: 25, course: 'Python' }
+var stud4 = { name: 'Pqr', age: 22, course: 'Node' }
+
+var arr = [stud1, stud2, stud3, stud4]
+
+console.log('Before Sorting:');
+console.log(arr);
+
+// arr.sort(function (s1, s2) {
+//     return s1.age - s2.age
+//   })
+
+arr.sort(function (s1, s2) {
+    return s1.name.localeCompare(s2.name)
+  })
+
+console.log('After Sorting:');
+console.log(arr);
+
+-------------------------------------------
+Document Object Model (DOM):
+------------------------------
+DOM acts as interface between JS and HTML, CSS i.e. by DOM javaScript can communicate with Html and CSS
+
+To display Document to the console:
+------------------------------------
+console.log(document)
+
+How to Grab HTML elements from the DOM:
+---------------------------------------
+
+-> Importanat DOM attribute
+----------------------------------
+1. document.URL ===> This is original URL of the website
+2. document.body ===> It returns everything inside the body
+3. document.head ===> It returns head of the page
+4. document.links ===> It returns list of all links of the page
+
+Important methods of DOM:
+----------------------------
+
+1. document.getElementById():
+---------------------------------
+returns element with the specified id.
+
+2. document.getElementsByClassName():
+-----------------------------------
+returns list of all elements belongs to the specified class.
+
+3. document.getElementsByTagName():
+---------------------------------
+returns list of all elements belongs to the specified tag name.
+
+4. document.querySelector():
+---------------------------------
+returns the first object matching CSS style selector
+
+5. document.querySelectorAll():
+---------------------------------
+return all the objects matches the CSS style selector
+
+
+
+
 
 
 
