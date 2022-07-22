@@ -5,24 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Accessing</title>
+    <title>JS | Objects</title>
 </head>
 
 <body>
 
     <script>
 
-        function doubeIt(x) {
-            console.log(2 * x);
+        var nums = { fno: 100, sno: 200, tno: 300 }
+
+        for(key in nums){
+            console.log(key); // KEY
+            console.log(nums[key]); // VALUE
+
+            console.log(key +" : "+nums[key]); // KEY : VALUE
         }
-
-        var numsA = [10, 20, 30, 40, 50];
-        var numsB = [10, 20, 30, 40, 50];
-
-        console.log(numsA === numsB);
-  
-
-
 
     </script>
 

@@ -1049,6 +1049,107 @@ arrObj.splice(index, numOfElements)
         console.log(nums);// [10, 20,  50]
 
 
+JavaScript Objects:
+--------------------
+-> By using arra e can store a group of individual objects and it is not possible to store key-value pair.
+
+-> If we want to represent a grou of key-value pairs then we should go for the Objects.
+
+Array: a group of individual objects
+Object: a group of key-value pairs.
+
+-> JS objects are similar to Java Map and Python dict
+
+Syntax:
+----------
+var variableName = {key1:value1, key2:value2, key3:value3, .......}
+
+Example:
+--------
+var movie = {
+
+	name : 'Bahubali',
+	year: 2016,
+	hero: 'Prabhas'
+
+}
+
+-> In the case of JS objects , no gurantee for the orders and hence index concept is not applicable.
+
+How to access values from Object:
+----------------------------------
+1. obj["key"]:
+---------------
+Here quotes are mandatory.
+
+movie["name"] // Bahubali
+movie[name] // Invalid
+
+1. obj.key
+-----------
+Here we calculatennot use quotes
+
+movie.hero // Prabhas
+
+
+console.log(movie["name"]) // Bahubali
+console.log(movie.name) // Bahubali
+
+How to create and initialize JS objects:
+------------------------------------------
+1. To create an empty object
+
+	var nums = {};
+	     OR
+	var nums = new Object()
+
+Once we creates empty object we can add key-value pair as follows:
+----------------------------------------------------------------------
+1st Way:
+--------
+nums["fno"]=100
+nums["sno"]= 200
+
+2nd Way:
+--------
+nums.fno =100
+nums.sno = 200
+
+How to update the values:
+-------------------------
+nums["fno"]=111;
+  OR
+nums.fno =111  
+
+-> How to Iterate Objects:
+-------------------------------
+to access all key-value pairs we can use for-in loop
+
+Example:
+------------
+var nums ={fno:100, sno: 200, tno: 300}
+
+LAB:
+-------
+Create an Student object with name, age, course
+
+Create few Student ojects and store in an array.
+
+print the array,
+
+sort the array on the basis of student age
+
+print the sorted array.
+
+
+
+
+
+
+
+
+
+
 
 
 
