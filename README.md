@@ -1213,70 +1213,695 @@ returns the first object matching CSS style selector
 ---------------------------------
 return all the objects matches the CSS style selector
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------------------
+Why Java:
+==========
+-> Object Oriented Programming Language
+-> Platform independent
+-> Secure
+-> Easy to learn
+-> Robust
+-> Functional Style of programming(From Java8)
+....
+....
+
+Object Oriented Programming Language:
+--------------------------------------
+class
+object
+inheritance
+polymorphism
+encapsulation
+abstraction
+
+Class:
+--------
+1. Class is an imaginary thing or blueprint which describes the properties or behaviour of an object.
+2. Class is a representation of similar kind of objects.
+3. Class is an user defined data type.
+
+Syntax:
+--------
+<modifier> class <name> <extends> <implements>
+			{
+				// body -> members
+								1. variables
+								2. methods
+								3. *)constructor
+								4. inner classes
+								5. initializer blocks
+			}
+			
+Member can be:
+--------------
+static : members are associated with Class or ClassName
+instance :members are associated with Object or Object Refenece.
+======================
+Example:
+--------
+	class A
+		{
+		}
+
+
+public class Car {
+
+	int h; // instance variable
+	int w; // instance variable
+
+	static float wc; // static variable
+
+	// instance method
+	void move() {
+		// body
+	}
+
+	// static method
+	static void avg() {
+		// body
+	}
+
+}
+-----------------------------------------------------
+2. Object:
+-----------
+1. Object is real world entity.
+2. Object is an instance of a class.
+
+Syntax:
+----------
+   <type>  <var> = new <type>(<parameters>)
+   
+Example:
+----------
+ Car c1 = new Car();
+ 
+ Car c2 = new Car();
+ 
+Acessing members:
+-----------------
+<ClassName>.<member> // static member
+<ObjRef>.<member> // instance as well as static member
+
+Car.wc = 100;
+
+c1.h =15;
+c2.w =30;
+
+c1.wc =150;  //OK but not recommended
+
+-----------------------------------------------
+Data types:
+-----------
+1. Primitive Data Types
+
+	Boolean data type
+		-> boolean
+	Character data type
+		-> char
+	Integer data type
+		-> byte
+		-> short		
+		-> int
+	l	-> long
+	Floatig Point data type
+		-> float
+		-> double
+
+byte -> short -> int -> long -> float -> double
+        char  -> int
+		
+2. Reference Data Types
+	-> class
+	-> interface
+	-> array
+	-> enum
+
+
+Why Char data type is 2 Bytes in Java?
+----------------------------------------
+In C/C++ , ASCII-8 uses as a encoding scheme
+
+8 bits -> 1 Byte => 2 the power 8 => 256 chars maximum
+a-z
+A-Z
+0-9
++ - / * @ # $ ...
+Arabics 
+Korean 
+Chinese......
+
+Java uses Unicode-16 bits encoding scheme
+
+16 bits = 2 Bytes => 2 the power 16 => 65536 
+
+-------------------------------------------------------
+Operators:
+==========
+1. Arithmetic operators:
+----------------------------
+a) +, -, *, /, %
+
+b) Extended assignement operators
+	 a= a + b; ==>  a += b;
+	 a= a - b; ==>  a -= b;
+	 a= a * b; ==>  a *= b;
+	 a= a / b; ==>  a /= b;
+	 a= a % b; ==>  a %= b;
+
+c)  
+		int x = 10;
+		System.out.println(x / 0); // java.lang.ArithmenticException: / by zero
+		System.out.println(x / 0.0); // Infinity
+		System.out.println(-x / 0.0); // -Infinity
+		System.out.println(0.0 / 0.0); // NaN
+
+d) MAX(int, <typ11>, <type2>, ..., <typeN>)
+		int i = 10;
+		float f = 2.5F;
+		long l = 10;
+		
+	   float	x = (i+f) * l ; // MAX(int, int, float, long )
+
+2. Relational Operators:
+----------------------------
+a) >, >=, <, <=
+
+b) Operands: Numerics
+	result : boolean
+	
+Example:
+---------
+  int x = 15;
+  
+  boolean b = 10 < x < 20; // true < 20 => Compile time error
+  boolean b = (10 < x) & (x < 20); // true
+  
+3. Equality Operators:
+----------------------------
+a) ==, !=
+
+b) Operands: Any
+	result : boolean
+
+Example:
+-----------
+  int i = 10;
+  
+  boolean b1 = i == 15; // false
+          
+  boolean b2 = b1 == false; // true
+
+----------------------------------------
+ Car c1 = new Car();
+ Car c2 = new Car();
+ 
+ boolean b3 = c1 == c2; // false
+
+4. String Concatenation Operator ('+'):
+---------------------------------------
+
+String s1 = "I Love ";
+String s2 = "Java";
+
+String s3 = s1 + s2 ; // "I love Java"
+
+SOP(100 + "Hello"); // "100Hello"
+
+5. Variable Increment and Decrement operator:
+---------------------------------------
+a) ++, --
+
+Example:
+----------
+a)
+		int i = 10;
+
+		// ++i; // pre-increment
+		i++; // post-increment
+
+		System.out.println(i); // 11
+
+b)
+        int j = ++i; // pre-increment
+		System.out.println(i); // 11 
+		System.out.println(j); // 11
+
+		int j = i++; // post-increment		
+		System.out.println(i); // 11 
+		System.out.println(j); // 10
+
+
+c) int x = ++5;  // CE
+
+6. Boolean Logic operators:
+------------------------------
+a) &, |, ^, !
+
+b) Operands: boolean expression
+   result : boolean
+   
+Example:
+---------
+  int x = 15;
+  
+  boolean b = (10 < x) & (x < 20); // true
+   
+c) Short circuit Operators:
+		&&, ||
+
+d) Extended assignment operators:
+	 a = a & b; ==> a &= b;
+     a = a | b; ==> a |= b;
+	 a = a ^ b; ==> a ^= b;
+
+
+int i =10;
+
+  boolean x = (20 < i ) &  (i > 5); // => false & true => false
+  
+  boolean y = (20 < i ) &&  (i > 5); // false && ---not evaluated-- => false
+
+
+7. Ternary Operator:
+---------------------
+Syntax:
+---------
+  <boolExpr> ? <expr1> : <expr2>
+
+ int a = ---;
+ int b = ---;
+ 
+ int max;
+  
+if(a>b)
+  {
+	max = a;
+  }
+else
+  {
+	max = b;
+  }
+
+SOP("Max is: "+ max);
+
+In One Line:
+------------
+  int a = ---;
+ int b = ---;
+ 
+int max = a>b ? a: b;
+
+SOP("Max is: "+ max);
+
+LAB: Find maximum of 3 number using both approch
+
+----------------------------------------------------------------
+Iterative Statements:
+----------------------
+1. for loop
+2. while loop
+3. do-while
+4. ForEach / Enhance for loop 
+
+	for(<type> <var> : <source>) // Source can be Array or Collection
+	{
+	// body
+	}
+
+	int[] arr = { 10, 20, 30, 40, 50 };
+
+		System.out.println(arr);
+		System.out.println(Arrays.toString(arr));
+		System.out.println("==================================");
+
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(arr[i]);
+		}
+
+		System.out.println("==================================");
+		for (int x : arr) {
+			System.out.println(x);
+		}
+----------------------------------
+1. for loop:
+------------
+for(<initialization> ; <condition>; <updation>)
+{
+	// body 
+}
+
+2. while loop:
+------------
+
+<initialization> ;
+--
+---
+--
+while( <condition>)
+{
+	// body 
+	 <updation>
+}
+
+2. do-while loop:
+------------
+
+<initialization> ;
+--
+---
+--
+do
+{
+	// body 
+	 <updation>
+}
+while( <condition>);
+
+-----------------------------------------------
+Lab: print 1 to 10 using for, while and do-while
+
+-------------------------------------------------
+Branching:
+-----------
+a)
+if(<boolExpr>{
+// body
+}
+
+b)
+if(<boolExpr>){
+// body
+}
+else{
+// body
+}
+
+c)
+
+if(<boolExpr>){
+// body
+}
+else if(<boolExpr>){
+// body
+}
+else if(<boolExpr>){
+// body
+}
+else{
+// body
+}
+
+Switch statement:
+------------------
+**) char, byte, short, int, enum, String
+switch(<noLongIntegralExpression>)
+{
+	case <label>:
+			---
+			---
+	case <label>:
+			---
+			---
+	case <label>:
+			---
+			---
+	defualt:
+		--
+}
+
+LAb:
+-------
+Take a number if it is 1 print Monday, 2 for TuesDay, ... 7 for Sunday, for any other numer Are u crazy...
+
+
+int day = ----;
+
+switch(day){-----}
+
+============================
+Array:
+------------
+-> Array is a linear Data Structure.
+-> In java Arrays are objects.
+-> Every array has an extra field named 'length' which contains size of an array.
+-> Arrays are indexed starting from 0.
+-> If we use an invalid index we will get an exception named ArrayIndexOutofBoundsException(AIOBE).
+
+How we can create arrays in Java:
+----------------------------------
+1. <type> <var> = new <type>[<size>]
+2. <type> <var> = {<values>};
+
+
+1) int[] arr1 = new int[5];
+
+		arr1[0] =10;
+		arr1[1] =20;
+		arr1[2] =30;
+		arr1[3] =40;
+		arr1[4] =50;
+
+2) int[] arr2 = {10, 20, 30, 40, 50};
+
+======================================
+Input and Ouput:
+------------------
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter your Name: ");
+		String name = sc.next();
+
+		System.out.println("Enter your Age: ");
+		int age = sc.nextInt();
+
+		System.out.println("Enter your Salary: ");
+		double salary = sc.nextDouble();
+
+		System.out.println("Hello " + name + " your age is " + age + " and salary is " + salary);
+
+		sc.close();
+		
+LAB:
+-----
+Ask number of Student
+
+Then takes there total Marks in a subject
+
+then print average of those marks
+
+then print maximum and minimum  marks
+
+then print result:
+
+> 60 -> First
+> 50 Second
+> 40 Third
+< 40 Failedd..
+
+Batch Will Start from 9 AM tomarrow and onwards
+
+========================================================
+Method:
+-----------
+-> A group of statements which can call multiple times from another code.
+
+Syntax:
+--------
+<modifier> <returnType> <name> (<ListOfCommaSeparatedParameters>) <throws>
+{
+	// body
+}
+
+Example:
+----------
+ void foo(){
+	SOP("Hello from foo");
+ }
+ 
+ int sum(int a, int b)
+ {
+	// 1K line
+	return a+b;
+ } 
+
+Method Overloading (Compile time | early | static polymorphism ):
+-----------------------------------------------------------------
+Within a Java class, we can have 2 or more than  methods wich have same name but different parameter list.
+
+Constructor:
+-------------
+-> Constructor is a special member of class which can be used to construct initial state of an object.
+-> Constructors are similar to the method.
+-> Rules for constructor creation:
+	a) Same name as of the class
+	b) Only access modifiers (public, protected, private) are permisable
+	c) No return type even not a void
+
+-> We can have default(no-args) constructor as well as parameterized constructor. 
+  Hence constructor can be overloaded.
+-> If we dont have any constructor in our class, Compiler will provide a default constructor.
+
+===============================
+Can we mak a cosntructor private?
+
+If N -> Why
+If Y -> why we do this?
+
+---------------------------------------------
+Modifier:
+-----------
+a) Access Modifier
+	-> public
+	-> protected
+	-> default
+	-> private
+		
+b) Other Modifier
+	-> static
+	-> final
+	-> abstract
+	-> native
+	-> transient
+	-> volatile
+	-> synchronized
+	-> strictfp
+		
+
+PUBLIC:
+--------
+Accessible everywhere.
+
+Protected:
+--------
+a) Accessible with in the same package.
+b) Can go out side the package through inheritance.
+
+DEFAULT:
+--------
+Accessible with in the same package.
+
+PRIVATE:
+--------
+Accessible only within the class.
+
+--------------------------------------------
+Java Packages:
+---------------
+hospital
+	|- A.java, B.java, C.java, D.java, ...
+
+
+
+hospital
+	|- A.java, B.java
+	|
+	|-doctors
+		|-C.java
+		|-ent
+			|-D.java
+		|-cardio
+			|-E.java
+	
+	|-staff
+		|-F.java
+		|-nursing
+			|-G.java
+		|-clerk
+			|-H.java
+
+	|-patient
+		|-I.java
+		|-admit
+			|-J.java
+		|-opd
+			|-K.java
+
+---------------------------------------------
+Object Oriented Programming:
+------------------------------
+Inheritance [IS-A]:
+-------------------
+It is a way code reusability.
+
+ Person
+	|-eat()
+	|-sleep()
+	
+ Employee INHERITS Person
+	|- doWork()
+
+ Student INHERITS Person
+	|- study()
+
+
+ Dog
+  |- bark()
+
+Aggregation | Composition[HAS-A]:
+----------------------------------
+             // Employee IS-A Person -> Inheritance
+public class Employee extends Person {
+	
+	Dog dog;   // Employee HAS-A Dog -> Aggregation
+		
+	--
+	---
+}
+
+-----------------------------------------------------
+-> Java Supports SINGLE inheritance using CLASSES
+-> Java also supports MULTIPLE inheritance wusing interfaces.
+-> In java, java.lang.Object class is the ROOT class. Every class inherits it either directly or indirectly.
+-> If a class doesnot mentions its parent class then taht class inherits Object class directly.
+
+-------------------------------------------------------------------------
+Method Overloading (Compile time | early | static polymorphism ):
+
+=> Within a Java class, we can have 2 or more than  methods which have same name but different parameter list.
+
+public class CompileTimePolymorphism {
+
+	void sum(int a, int b) {
+		System.out.println(a + b);
+	}
+
+	void sum(int a, int b, int c) {
+		System.out.println(a + b + c);
+	}
+
+}
+
+Method Ovrriding (Runtime | late | dynamic Polymorphism):
+-----------------------------------------------------------
+=> Between the classes which have IS-A relationship i.e. inheritance,
+  child class have a method same as parent class.
+  
+Rules:
+---------
+-> Method name and parameter(s) should be same.
+
+-> Return Type:
+---------------
+a) If primitive , we cannot do any thing
+b) If reference , we can use same or any sub type (Co-Varient)
+
+-> Accessibilty:
+------------------
+We can widen but narrowing is not allowed.
+
+private -> default -> protected -> public
+
+**) private and static methods will nat take participation in Method Overriding
+
+-> throws clause:
+--------------------
+TODO
+
+---------------------------------------------------------------------
+Other Modifiers:
+-------------------
 
 
 
