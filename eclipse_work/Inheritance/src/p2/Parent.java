@@ -7,6 +7,10 @@ public class Parent {
 	private void foo() {
 		System.out.println("Hello from Parent");
 	}
+	
+	public static  void blaah() {
+		System.out.println("Hello from Parent");
+	}
 
 	Animal sum(int a, int b) {
 

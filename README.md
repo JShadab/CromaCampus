@@ -1902,6 +1902,364 @@ TODO
 ---------------------------------------------------------------------
 Other Modifiers:
 -------------------
+abstract keyword:
+=================
+
+Abstract Class:
+---------------
+-> It restrict their instanciation process. i.e. no one create object(s) for Abstract classes.
+
+Abstract Method:
+---------------
+-> A method with body can be declared as abstract method. In this cse we sholud declare class as an abstract class.
+-> Any sub class will provide the body of abstract methods, otherwise they will become abstract
+
+LAB:
+-------
+1. Create a abstract class Shape with calcArea(int a, int b) 
+2. Create few sub class Square, Triangle, Circle and Show Inheritance, method overriding
+3. Create a Test class to demostrate a working example.
+
+
+final keyword:
+=================
+-> We can use final with class, method and variables.
+-> Final is the only modifier which can be applied on local variable.
+
+-> Final class cannot be inheried.
+		final class => Inhertance -> NO,  Object Creation -> YES
+		abstract class => Inhertance -> YES,  Object Creation -> NO
+		
+-> Final method cannot be overridden.
+
+-> Final variable cannot be re assign.
+       final + variable = CONSTANT
+
+
+----------------------------------------
+Exception Handling:
+----------------------
+try
+catch
+finally
+
+-> a try can have 0 or more catch(es) and/or 0 or 1 finally
+
+a) 
+try{}
+catch(---){}
+finally{}
+
+b) 
+try{}
+catch(---){}
+
+c) 
+try{}
+catch(---){}
+catch(---){}
+
+d) 
+try{}
+catch(---){}
+catch(---){}
+finally{}
+
+e) 
+try{}
+finally{}
+
+// f) TRY-With-Resources
+		try (BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in))) {
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// g) Multi-Exception Catch Block
+		try {
+		} catch (NullPointerException | ArithmeticException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+------------------------------
+throws clause:
+--------------
+-> Exceptions can be categorised into two category:
+	a) Unchecked Exception
+		-> Object of Error, RuntimeException and its sub-claases called Unchecked Exception.
+		-> Compile will ignore them as they are Irrecoverable or programming mistake.
+		      we should handle them but try to avoid them.
+			  
+	b) Checked Exception
+	    -> all other exceptions are called Checked Exception.
+		-> Compile will an error and force us (developers) to handle this king of exception 
+		    either TRY-CATCh or THROWS clause.
+			
+		void f1() throws IOException	
+			{
+				// any code whichcan be result in IOException
+			}
+
+
+throw:
+-------
+
+------------------------------------------
+Fundamanetal Classes:
+----------------------
+java.lang.Object
+==================
+
+a) int hashCode():
+-------------------
+It gives a numbr which denotes te hash code of the object and used in Collection Framework (in Hastable, HashMapt, etc..)
+
+b) String toString():
+----------------------
+It returns String representation of an object.
+
+c) boolean equals(Object):
+-----------------------------
+Indicates whether some other object is "equal to" this one. 
+
+d) Class getClass():
+--------------------
+Returns the runtime class of this Object.
+
+e) Object clone() throws CloneNotSupportedException:
+-----------------------------------------------------
+Creates and returns a copy of this object. The precise meaningof "copy" may depend on the class of the object.
+
+	
+java.lang.String:
+-------------------
+-> String is chararacter sequence enclosed in double quotes.
+-> String ojects are immutable/non-changable.
+
+java.lang.StringBuilder and java.lang.StringBuffer:
+----------------------------------------------------
+-> these are also represents chararacter sequence.
+-> these are mutable/changable.
+-> StringBuffer is thread safe so we can use it in Multi Threading environment
+
+Example:
+--------------
+  String s1 = "Hello Friends!!!";
+  String email = "abc123@papa.com";
+
+Methods:
+---------
+1. int length(): 
+----------------
+Returns the length of this string.
+
+1. char charAt(int index): 
+-------------------------
+Returns the char value at thespecified index. An index ranges from 0 to length() - 1. 
+The first char value of the sequenceis at index 0, the next at index 1,and so on, as for array indexing. 
+
+
+===============================
+Wrapper classes:
+-----------------
+boolean -> Boolean
+char -> Character
+
+byte -> Bytes
+short -> Short
+int -> Integer
+long -> Long
+
+float -> Float
+double -> Double
+
+void -> Void
+
+--------------------------
+LocalDate class:
+-----------------
+LocalDate date3 = LocalDate.now();
+
+Interface (Java-7):
+--------------------
+-> Interfcae is an user defined data type.
+-> Interface provides multiple inheritance.
+
+Syntax:
+--------
+<modifier> interface <name> <extends> 
+			{
+				// body -> members
+								1. variables (no but constants)
+								2. methods (but only abstract)
+								3. inner interface
+			
+			}
+Example:
+---------
+public interface Papa {
+
+	void foo(); // public abstract void foo();
+
+	public abstract void blaah();
+
+	int i = 10; // public static final int i =10;
+	public static final int j = 15;
+
+}
+
+--------------------------------------------------------------
+Collection Framework:
+-----------------------
+java.util  package
+
+Set:
+---------
+-> Set is a non-indexed collection which provide uniqueness.
+-> Set doesnot maintains the order.
+-> We cannot get an element from Set but iterate it.
+
+List:
+-------
+-> List is a indexed collection which a llows duplicate elements.
+-> List maintains insertion order.
+-> We cannot get an element from List by using get(index).
+
+Map:
+-----
+-> Map is a key-value pair.
+-> Keys must be unique, values can be duplicate.
+-> Map doesnot maintains the order for keys.
+
+Sorting:
+---------
+Arrays.sort(----array---)
+
+Collections.sort(----list---)
+
+TreeSet -> for Set
+
+
+LAB:
+-------
+1. Create an Employee class with name age salary
+2. Create few employee objects and store them in either array or list.
+3. Sort the array or list..
+
+
+Comparable vs Comparator:
+-------------------------
+
+DBMS:
+----------
+DataBase Management System:
+--------------------------
+1. Network DBMS
+2. hierarchical DBMS
+3. Relational DBMS (RDBMS)
+	
+	----
+	----
+	36+
+	
+4. OO DBMS
+5. Distibute DBMS
+
+Emp_DB
+	|- employee
+			|- id (PK)
+			|- name
+			|- age
+			|- salary
+	
+
+SQL:
+----
+Structure query Language:
+--------------------------
+> SELCT *  from <tableName>
+
+SQL DBMS:
+----------
+    => MySQL
+	=> Oracle
+	=> Postgres SQL
+	=> MS SQL Server
+	=> MariaDB
+	=> SQLite
+	=> DB2
+	=> H2
+	=> GuptaSQL
+	
+NO-SQL DBMS:
+-------------
+=> Mongo DB
+=> Cassandra
+=> Amazon Dynamo DB
+=> BigTable
+=> ElasticDB
+
+-------------------------
+SQL vs No-SQL:
+
+
+SQL Commands:
+------------------
+
+To see avaialbale databases or schemas:
+----------------------------------------
+> show databases; OR show schemas;
+
+To create a new database or schema:
+----------------------------------------
+> create database <db_name>;
+
+To switch database:
+----------------------------------------
+> use <db_name>;
+
+To see avaialbale tables:
+-------------------------
+> show tables;
+
+To create a table:
+------------------
+> create table <table_name> ( <col_name1> <data_type1>, <col_name1> <data_type1>,..., <col_nameN> <data_typeN>);
+
+To see structure of table:
+--------------------------
+> desc <table_name>;
+
+To Show all data from a table:
+------------------------------
+> select * from <table_name>;
+
+JDBC:
+------
+
+
+-----------------------------------
+
+Laptop 
+	|- Processor processor
+
+
+IntelProcessor IS-A  Processor
+AmdProcessor IS-A  Processor
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
