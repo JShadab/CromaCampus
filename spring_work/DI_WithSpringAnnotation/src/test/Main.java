@@ -13,6 +13,15 @@ public class Main {
 		ApplicationContext spring = new AnnotationConfigApplicationContext(SpringConfig.class);
 
 		Car c1 = (Car) spring.getBean("car");
+		Car c2 = (Car) spring.getBean("car");
+		Car c3 = (Car) spring.getBean("car");
+		Car c4 = (Car) spring.getBean("car");
+		
+		System.out.println(c1);
+		System.out.println(c2);
+		System.out.println(c3);
+		System.out.println(c4);
+		
 		c1.start();
 
 		System.out.println("--------------------------");
