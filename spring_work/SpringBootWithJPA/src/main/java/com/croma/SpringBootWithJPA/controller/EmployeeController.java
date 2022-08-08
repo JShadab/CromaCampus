@@ -1,4 +1,4 @@
-package com.croma.RestWebServices.controller;
+package com.croma.SpringBootWithJPA.controller;
 
 import java.util.List;
 
@@ -11,14 +11,20 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.croma.RestWebServices.model.Employee;
-import com.croma.RestWebServices.service.EmployeeService;
+import com.croma.SpringBootWithJPA.model.Employee;
+import com.croma.SpringBootWithJPA.service.EmployeeService;
 
 @RestController
 public class EmployeeController {
 
 	@Autowired
 	private EmployeeService employeeService;
+
+	@PostMapping("/employee/{email}/{password}")
+	public Employee authenticate(@PathVariable String email, String password) {
+
+		return employeeService.authenticate(email, password);
+	}
 
 	@PostMapping("/employee")
 	public Employee addEmployee(@RequestBody Employee employee) {
@@ -42,6 +48,13 @@ public class EmployeeController {
 	public Employee getOneEmployee(@PathVariable int id) {
 
 		Employee emp = employeeService.getOneEmployee(id);
+		return emp;
+	}
+
+	@GetMapping("/employeeByEmail/{email}")
+	public Employee getOneEmployeeByEmail(@PathVariable String email) {
+
+		Employee emp = employeeService.getOneEmployee(email);
 		return emp;
 	}
 
