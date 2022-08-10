@@ -26,8 +26,8 @@ public class EmployeeService {
 		employeeRepository.deleteById(id);
 	}
 
-	public Optional<Employee> getOne(long id) {
-		return employeeRepository.findById(id);
+	public Employee getOne(long id) {
+		return employeeRepository.findById(id).orElseThrow();
 	}
 
 	public List<Employee> getAll() {

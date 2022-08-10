@@ -1,9 +1,10 @@
 package com.croma.springaopdemo.config;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.springframework.context.annotation.Configuration;
 
 import lombok.extern.slf4j.Slf4j;
@@ -16,17 +17,35 @@ public class AspectConfig {
 	// PointCut Expression : accessModifier returnType
 	// packageName.className.methodName(..)
 
-	@Before("execution (public * com.croma.springaopdemo.service.*.*(..))")
-	public void logBeforeAll(JoinPoint joinPoint) {
+//	@Before("execution (public * com.croma.springaopdemo.service.*.*(..))")
+//	public void logBeforeAll(JoinPoint joinPoint) {
+//
+//		log.info(joinPoint.getSignature().getName() + " started...");
+//
+//	}
+
+//	@After("execution (public * com.croma.springaopdemo.service.*.*(..))")
+//	public void logAfterAll(JoinPoint joinPoint) {
+//
+//		log.info(joinPoint.getSignature().getName() + " ended...");
+//
+//	}
+
+	@Around("execution (public * com.croma.springaopdemo.service.*.*(..))")
+	public void logAroungAll(ProceedingJoinPoint joinPoint) throws Throwable  {
 
 		log.info(joinPoint.getSignature().getName() + " started...");
 
-	}
-
-	@After("execution (public * com.croma.springaopdemo.service.*.*(..))")
-	public void logAfterAll(JoinPoint joinPoint) {
+		joinPoint.proceed();
 
 		log.info(joinPoint.getSignature().getName() + " ended...");
+
+	}
+	
+	@AfterReturning("execution (public * com.croma.springaopdemo.service.*.getAll(..))")
+	public void logAfterReturning(JoinPoint joinPoint) {
+
+		log.info(joinPoint.getSignature().getName() + " after reurning..");
 
 	}
 
