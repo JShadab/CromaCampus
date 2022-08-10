@@ -20,8 +20,11 @@ public class EmployeeService {
 	public Employee addEmployee(Employee employee) {
 
 		log.info("addEmployee() start.....");
+		
 		employeeRepository.insert(employee);
+		
 		log.info("addEmployee() end.....");
+		
 		return employee;
 	}
 
