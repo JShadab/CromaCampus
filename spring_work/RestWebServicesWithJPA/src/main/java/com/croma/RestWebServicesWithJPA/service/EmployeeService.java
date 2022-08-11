@@ -20,9 +20,9 @@ public class EmployeeService {
 	public Employee addEmployee(Employee employee) {
 
 		log.info("addEmployee() start.....");
-		employeeRepository.save(employee);
+		Employee empDB = employeeRepository.save(employee);
 		log.info("addEmployee() end.....");
-		return employee;
+		return empDB;
 	}
 
 	public Employee updateEmployee(Employee employee) {

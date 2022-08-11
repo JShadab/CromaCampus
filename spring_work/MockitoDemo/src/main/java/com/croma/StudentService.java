@@ -9,7 +9,14 @@ public class StudentService {
 	}
 
 	public int addStudent(Student student) {
+
+		// Some code
+
 		return studentRepository.save(student);
+	}
+
+	public void logInfo() {
+		System.out.println("add student method calls from StudentService class");
 	}
 
 }

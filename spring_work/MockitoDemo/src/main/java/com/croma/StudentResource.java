@@ -9,6 +9,10 @@ public class StudentResource {
 	}
 
 	public int addStudent(Student student) {
+		studentService.logInfo();
+		studentService.logInfo();
+		studentService.logInfo();
+		studentService.logInfo();
 		return studentService.addStudent(student);
 	}
 
