@@ -3,6 +3,7 @@ package com.croma.springaopdemo.config;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.Configuration;
@@ -42,10 +43,17 @@ public class AspectConfig {
 
 	}
 	
-	@AfterReturning("execution (public * com.croma.springaopdemo.service.*.getAll(..))")
+	@AfterReturning("execution (public * com.croma.springaopdemo.service.*.getAll())")
 	public void logAfterReturning(JoinPoint joinPoint) {
 
 		log.info(joinPoint.getSignature().getName() + " after reurning..");
+
+	}
+
+	@AfterThrowing("execution (public * com.croma.springaopdemo.service.*.getOne(..))")
+	public void logAfterThrowing(JoinPoint joinPoint) {
+
+		log.info(joinPoint.getSignature().getName() + " Some ERROR");
 
 	}
 
