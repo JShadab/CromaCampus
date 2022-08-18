@@ -364,6 +364,109 @@ LAB:
 9. Write a Java program to calculate the average value of array elements.
 10. Write a Java program to find the index of an array element.
 
+Retreiving element of Arrays:
+------------------------------
+
+We can retrieve elements of array by using the following ways:
+
+a) while loop
+b) for loop
+c) for of loop
+4) forEach method
+
+const friends = ['Lala', 'Arif', 'Adarsh', 'Tushar']
+
+console.log('--------------Using while loop-------------');
+
+let i = 0;
+while (i < friends.length) {
+    console.log(friends[i]);
+    i++;
+}
+
+console.log('--------------Using for loop--------------');
+
+for (let i = 0; i < friends.length; i++) {
+    console.log(friends[i]);
+}
+
+console.log('--------------Using for-of loop--------------');
+
+for (friend of friends) {
+    console.log(friend);
+}
+
+console.log('--------------Using forEach method--------------');
+
+//friends.forEach(print);
+
+// function print(element){
+//     console.log(element);
+// }
+
+friends.forEach(function (element) {
+    console.log(element);
+});
+
+How to delete array elements based on index:
+---------------------------------------------
+We have to use splice() function.
+
+Syntax:
+==========
+ arrayObj.splice(index, numOfElements)
+
+Example:
+========
+const friends = ['Lala', 'Arif', 'Adarsh', 'Tushar']
+friends.splice(1, 2);
+console.log(friends); // ['Lala',  'Tushar']
+
+Project: Book Management System:
+=====================================
+
+1. Prompt a message => "Which operation You want to perform [add | delete | list | exit]"
+
+2. In case of add:
+        ask a book name and add in to a bookname araay
+
+3. In case of list:
+        display all book names from the book array
+
+4. In case of delete:
+        first check wether given book name is exits or not. 
+            a) if exists then delete the book name from the book array
+            b) other wise notify book is not avaialble
+            
+5. Keep propting step number 1 until user enters 'exit'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
