@@ -1,0 +1,404 @@
+JavaScript is a dynamically typed language:
+---------------------------------------------
+
+  var x = 10; //OK type of x is 'number'
+  
+  x = 2.3;  //OK type of x is 'number'
+  
+  x = "10"; //OK type of x is 'string'
+  
+  x = false; //OK type of x is 'boolean'
+  
+  
+Java is statically types language:
+-----------------------------------
+  int x = 10; //OK
+  
+  x = 2.3;  //ERROR
+  
+  x = "10"; //ERROR
+  
+  x = false; //ERROR
+  
+JavaScript Operators:
+----------------------
+1. Arithmetic Operators:
+---------------------------
+  +, -, *, /, %, **
+  
+Example:
+--------
+10 + 3 ==> 13
+10 - 3 ==> 7
+10 * 3 ==> 30
+10 / 3 ==> 3.333333
+10 % 3 ==> 1
+10 ** 3 ==> 1000
+
+2. Comparision Operator:
+---------------------------
+ <, <=, >, >=, ==, !=, ===
+ 
+Example:
+--------
+10 < 20 ==> true
+10 <= 20 ==> true
+10 > 20 ==> false
+10 >= 20 ==> false
+10 != 20 ==> true
+10 == 20 ==> true
+10 === 20 ==> true
+
+
+10 == '10'   ==> true
+10 === '10'  ==> false
+
+3. Logical Operator:
+---------------------------
+ &&(AND), ||(OR), !(NOT)
+ 
+ Truth Table for AND:
+ =====================
+ true && true ==> true
+ true && false ==> false
+ false && true ==> false
+ false && false ==> false
+ 
+ Truth Table for OR:
+ =====================
+ true || true ==> true
+ true || false ==> true
+ false || true ==> true
+ false || false ==> false
+ 
+*) Non-Zero values treated as true value and ZERO treated as false value.
+*) empty string treated as false
+*) null, undefined, NaN treated as  false
+
+--------------------------------------------------------
+Conditional Statements:
+------------------------
+a) if
+b) if else
+c) else if
+
+Syntax:
+---------
+if(bool)
+{
+  action if bool is true
+}
+
+if(bool)
+{
+  action if bool is true
+}
+else{
+  action if bool is false
+}
+
+
+Ques: Write a JS code to check given number is even or not?
+Ques: Write a JS code to proper message based on provided age:
+
+            age > 60, You are Senior Citizen
+            age < 18, You are minor, you cannot cast the vote
+           for all other age values,  Thanks for the voting
+
+-----------------------------------------------------
+Iterative Statements:
+----------------------
+1. while loop
+2. for loop
+
+1. While Lopp:
+----------------
+As long as some condition is true it execute the code..
+
+Syntax:
+--------
+
+while(<boolCond>)
+{
+  //body
+}
+
+// Write a JS code to print Hello 10 times.
+
+ var count = 1;
+    while (count <= 10) {
+       console.log('Hello');
+      count++;
+        }
+
+
+2. For Lopp:
+----------------
+When we know the numbr of iteration in advance then we should use for loop
+
+Syntax:
+-------
+
+for(initialization; condition; updation)
+{
+  // body
+}
+
+// Write a JS code to print Hello 10 times.
+
+ 
+for(var count = 1; count <= 10; count++) 
+{
+ console.log('Hello');      
+}
+----------------------------------------------------------
+Functions:
+=============
+If any piece of code repeatedly required in our application, then it is not 
+recommended to write that code separately every time.
+
+We have to separate that code into a function and we can all that function where ever it is required.
+
+The main adavantage of function is code reusability.
+
+Syntax:
+-----------
+function funcName(arguments)
+{
+  // body
+  return value
+}
+
+Example:
+---------
+
+function wish()
+{
+  console.log('Good Morning')
+}
+
+wish()
+wish()
+wish()
+
+Function With arguments:
+-------------------------
+function wish(name) {
+ console.log('Hello ' + name +', Good Morning')
+}
+
+wish('Blake')
+
+Function With arguments with defualt value:
+--------------------------------------------
+
+function wish(name='Guest') {
+ console.log('Hello ' + name +', Good Morning')
+}
+
+wish('Blake') // Hello Blake, Good Morning
+wish() // Hello Guest, Good Morning
+
+Function With return values:
+-----------------------------
+
+function square(num) {
+  return num * num;
+}
+
+Ques:  Write a JS code to find the factorial of a num
+
+JavaScript scopes:
+-------------------
+In JS there are 2 scopes.
+
+1. Global scope
+2. Local scope
+
+
+
+**) Never use VAR, always use CONST, if u want to reassign the use LET
+
+Higher Order function:
+-----------------------
+We can pass a function as arguments to another function. A function can return another function.
+
+Such type of special function are caled Higher order function.
+
+Eg. setInterval()
+
+function singAsong() 
+{
+  console.log('Sabse Payaraa Kon hai, Papa, mere Papa hai..');
+}
+
+ const id1 = setInterval(singAsong, 3000);
+ console.log(id1);
+
+Anonymous function:
+-------------------
+Some times we can efine a function without name, such type f nameless functions 
+are called annonymous functions
+
+
+JavaScript Arrays:
+-----------------------
+An array is an indexed collection of elements.
+
+Without array:
+--------------
+var n1 =10;
+var n2 =20;
+var n3 =30;
+var n4 =40;
+var n5 =50;
+
+With array:
+--------------
+var nums = [10, 20, 30, 40, 50]
+
+Accessing values from the array:
+--------------------------------
+const friends= ['Lala', 'Arif', 'Adarsh', 'Tushar']
+
+How to create an empty array:
+------------------------------
+a) const arr1 = [];
+b) const arr2 = new Array();
+
+How to find length of he array:
+------------------------------
+var nums = [10, 20, 30, 40, 50]
+
+console.log(nums.length); //5
+
+Is JS array can hold only homogeneous elements? NO
+-------------------------------------------------
+const arr = [10, 'Abc', true, null, 88]
+
+Important Methods related to JavaScript arrays:
+------------------------------------------------
+1. push():
+===========
+We can use push() method to add elements to the END of the array. 
+After adding the element this method returns the length of the array.
+
+Exmple":
+----------
+const friends = ['Lala', 'Arif', 'Adarsh', 'Tushar']
+console.log(friends); //  ['Lala', 'Arif', 'Adarsh', 'Tushar']
+
+friends.push('Shalu')
+console.log(friends); //  ['Lala', 'Arif', 'Adarsh', 'Tushar', 'Shalu']
+
+2. pop():
+===========
+We can use pop() method to remove and  return the last element of the array. 
+
+Exmple":
+----------
+const friends = ['Lala', 'Arif', 'Adarsh', 'Tushar']
+console.log(friends);
+
+const x =friends.pop()
+console.log(x); // 'Tushar'
+
+console.log(friends); // ['Lala', 'Arif', 'Adarsh']
+
+
+3. unshift():
+===========
+We can use unshift() method to add elements to the FIRST position of the array. 
+It is the counter part of push() method.
+
+Exmple":
+----------
+const friends = ['Lala', 'Arif', 'Adarsh', 'Tushar']
+console.log(friends); //  ['Lala', 'Arif', 'Adarsh', 'Tushar']
+
+friends.unshift('Shalu')
+console.log(friends); //  ['Shalu', 'Lala', 'Arif', 'Adarsh', 'Tushar']
+
+4. shift():
+===========
+We can use unshift() method to remove and return FIRST elements of the array. 
+It is the counter part of pop() method.
+
+Exmple":
+----------
+const friends = ['Lala', 'Arif', 'Adarsh', 'Tushar']
+console.log(friends); //  ['Lala', 'Arif', 'Adarsh', 'Tushar']
+
+friends.shift();
+console.log(friends); //  ['Arif', 'Adarsh', 'Tushar']
+
+5. indexOf():
+============
+We can use indexOf() to find the index of specified element.
+If the element present miltiple times then this method returns index of first occurrence.
+If the specified element is not available then we will get -1
+
+Example:
+----------
+const friends = ['Lala', 'Arif', 'Adarsh', 'Tushar']
+console.log(friends.indexOf('Mohan')); //2
+
+6. slice():
+============
+
+We can use clice to get part of the arrays as slice.
+
+slice(begin, end) // end is excluded -> begin to (end-1)
+slice() // returns totatl aaary. This can be used for cloning purpose
+
+LAB:
+------
+1. How to search an element inside it?
+2. How to reverse an array?
+3. How to print an array of strings to the output console?
+4. How to search the minimum and the maximum element in an array?
+5. How to merge two arrays?
+6. How to find common elements from arrays?
+7. How to check if two arrays are equal or not?
+8. Write a Java program to sum values of an array.
+9. Write a Java program to calculate the average value of array elements.
+10. Write a Java program to find the index of an array element.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

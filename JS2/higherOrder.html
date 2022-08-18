@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Hoger OrderFunctions</title>
+
+    <script>
+
+        function singAsong() {
+            console.log('Sabse Payaraa Kon hai, Papa, mere Papa hai..');
+
+            return 100;
+        }
+
+        function greet() {
+            console.log('Welcome');
+        }
+
+        // const id1 = setInterval(singAsong, 3000);
+        // console.log(id1);
+
+        // const id2 = setInterval(function () {console.log('Welcome')}, 2000);
+        // console.log(id2);
+
+
+        function blah( x) {
+        const i=   x();
+
+        console.log(i);
+        }
+
+        const x = blah(singAsong);
+
+        x();
+      //  greet();
+
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Welcome</h1>
+
+
+</body>
+
+</html>

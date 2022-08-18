@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML | Layout</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+       #right{
+        width: 50%;
+       }
+   
+    </style>
+
+</head>
+
+<body>
+
+    <div class="contanr">
+
+        <div class="row">
+            <div class="col-12">
+                <h1>Welcome to My App</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="avtar.png" width="300" height="300">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex reprehenderit porro fugiat dolores
+                    reiciendis magni.</p>
+            </div>
+            <div class="col-8">
+                <div class="conatiner" id="right">
+                    <form action="">
+                        Email : <input type="email" name="email" id="email" class="form-control">
+                        Pasword : <input type="password" name="pass" id="pass" class="form-control"> <br>
+                        <input type="submit" value="Login" class="btn btn-primary"> | <input type="reset"
+                            class="btn btn-success">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>All Rights are reserved &copy; Croma</h2>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

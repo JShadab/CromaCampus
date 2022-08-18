@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS | Selectors</title>
+
+    <style>
+        /* 
+
+       1.  *selector:
+       ----------------
+        *{
+            color: blue;
+        }
+
+        2.  Descendant selector:
+       -------------------------
+           
+    ol li a{
+            color: red;
+        }
+
+        3. adjacent selector:
+        ------------------------
+*/
+
+div+p{
+    color: chocolate
+}
+    </style>
+</head>
+
+<body>
+
+    <hr>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        
+    </div>
+    <p>Next to Div.</p>
+
+    <hr>
+
+    <a href="">Hello</a>
+
+    <ol>
+        <li>
+            <a href="">Java8</a>
+        </li>
+        <li>
+            <a href="">SpringBoot</a>
+        </li>
+        <li><a href=""> MySQL</a>
+        </li>
+        <li>
+            <a href="">Git</a>
+        </li>
+    </ol>
+
+    <ul>
+        <li>
+            <a href="">Java8</a>
+        </li>
+        <li>
+            <a href="">SpringBoot</a>
+        </li>
+        <li><a href=""> MySQL</a>
+        </li>
+        <li>
+            <a href="">Git</a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h1>This is Heading</h1>
+
+    <p>
+        This paragrapgh
+    </p>
+
+    <input type="text" name="" id="" value="This is text">
+
+</body>
+
+</html>
