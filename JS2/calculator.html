@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS | Calculator</title>
+
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Welcome to my Calculator App</h1>
+
+    First Number: <input type="number" name="first" id="first"> <br>
+    Second Number: <input type="number" name="second" id="second"> <br>
+
+    Output: <input type="number" name="output" id="output"> <br><br><br>
+
+    <input type="button" value="Add" onclick="foo()">
+
+    <input type="button" value="Change" onclick="blah()">
+
+    <script>
+        function foo() {
+
+            const a = Number(document.querySelector('#first').value)
+            const b = Number(document.getElementById('second').value)
+
+            document.getElementById('output').value = (a + b);
+
+        }
+
+        function blah() {
+
+            const heading = document.querySelector('h1');
+            heading.style.color = 'red';
+            heading.innerHTML="Welcome Back.Dekhi meri Taakat"
+        }
+    </script>
+</body>
+
+</html>

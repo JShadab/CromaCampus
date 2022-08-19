@@ -440,6 +440,116 @@ Project: Book Management System:
             
 5. Keep propting step number 1 until user enters 'exit'
 
+JavaScript Objects:
+---------------------
+if we want to represent a group of key-value pairs then we should go for Objects.
+
+Arrays: A group of individual Objects
+Object: A group of key-value pairs
+
+Syntax:
+---------
+var variableName= { 
+                    key1: value1,
+                    key2: value2,
+                    key3: value3,
+                    -------
+                    -------
+                    keyN: valueN 
+                    }
+
+Example:
+---------
+
+var movie= { "name" : "Gadar", "Hero": "Sunny", "date" : "19-08-2022"}
+
+How to access values from Object:
+----------------------------------
+1. obj["key"]
+===============
+console.log(movie["name"]); // Gadar
+
+2. obj.key
+============
+console.log(movie.name); // Gadar
+
+
+How o create and initialize JS Objects:
+---------------------------------------
+1. To create empty objecct
+
+    var obj1 = {}    OR
+    var obj2 = new Object()
+
+Once we creates empty object we can add key-value pairs as follow:
+
+1) obj1["prop1"] = "value1"
+
+2) obj1.prop1 = value1
+
+Nested Objects and array:
+-------------------------
+const emp = {
+    "name": "Musa",
+    "age": 36,
+    "isMinor": false,
+    "salary": 1234.50,
+    "friends": [
+        { "name": "Lala", "source": "ChildHood" },
+        { "name": "Usman", "source": "Office" }, 
+        { "name": "Tushar", "source": "College" }
+    ],
+    "address": {
+        "area": "HammyBerg",
+        "city": "Amsterdam",
+        "country": "Netherlands"
+    }
+}
+
+
+----------------------------------------------------------------------------
+DOM [Document Object Model]
+
+Important methods of DOM
+========================
+
+1. document.getElementById():
+------------------------------
+Returns element with the specified id.
+
+2. document.getElementsByClassName():
+----------------------------------
+Returns list of all elements belongs to the specifies class name.
+
+3. document.getElementsByTagName():
+----------------------------------
+Returns list of all elements belongs to the specifies tag name.
+
+4. document.querySelector():
+-----------------------------
+Returns the first object matching CSS style selector
+
+5. document.querySelectorAll():
+-----------------------------
+Returns all objects which matches the CSS style selector
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
