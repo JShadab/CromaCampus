@@ -4,7 +4,7 @@ const body = document.querySelector('body')
 const thinBorder = "1px solid black";
 const thickBorder = "3px solid blue";
 
-var currentCell;
+var currentCell = null;
 let x = 1;
 let y = 1;
 function onPageLoad() {
@@ -40,7 +40,7 @@ function createTable() {
     headerCol3.style.border = thinBorder;
 
     const headerCol4 = document.createElement('th')
-    headerCol4.innerHTML = "HEADER-3"
+    headerCol4.innerHTML = "HEADER-4"
     headerCol4.style.border = thinBorder;
 
 
@@ -148,20 +148,20 @@ function goDOWN() {
     x = x + 1;
     applyThickBorder()
 }
-function goRIGHT() { 
-    if(y == 4){
+function goRIGHT() {
+    if (y == 4) {
         return
     }
-    y= y+1;
+    y = y + 1;
     applyThickBorder()
 }
-function goLEFT() { 
-    if(y == 1){
+function goLEFT() {
+    if (y == 1) {
         return
     }
-    y= y-1;
+    y = y - 1;
     applyThickBorder()
 }
 function markCell() {
-    currentCell.style.backgroundColor='yellow'
- }
+    currentCell.style.backgroundColor = 'yellow'
+}

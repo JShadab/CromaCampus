@@ -1,0 +1,55 @@
+Node JS:
+---------
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+How to check installation in local system:
+--------------------------------------------
+> node -v
+v16.14.2
+
+>npm -v
+8.5.0
+
+TypeScript:
+------------
+-> TypeScript is an Open Source programming language created by MicroSoft.
+-> TypeScript is a superset of a JavaScript.
+
+            TypeScript = JavaScript + ES6 + ES7 + Types
+
+To install TypeScript:
+------------------------
+> npm install -g typescript 
+
+> tsc -v
+Version 4.7.4
+
+> tsc main.js --watch
+
+
+1. Given a year, report if it is a leap year.
+
+The tricky thing here is that a leap year in the Gregorian calendar occurs:
+
+on every year that is evenly divisible by 4
+  except every year that is evenly divisible by 100
+    unless the year is also evenly divisible by 400
+
+For example, 1997 is not a leap year, but 1996 is. 1900 is not a leap year, but 2000 is.
+
+
+2. Two-fer or 2-fer is short for two for one. One for you and one for me.
+
+Given a name, return a string with the message:
+
+One for name, one for me.
+Where "name" is the given name.
+
+However, if the name is missing, return the string:
+
+One for you, one for me.
+Here are some examples:
+
+Name	String to return
+Alice	One for Alice, one for me.
+Bob	One for Bob, one for me.
