@@ -1,0 +1,23 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>SALARY</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let emp of allEmps">
+                <td>{{emp.name}}</td>
+                <td>{{emp.age}}</td>
+                <td>{{emp.salary}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <button class="btn btn-success" (click)="addRow()">Add Row</button> &nbsp;
+    <button class="btn btn-danger" (click)="removeRow()">Remove Row</button>
+</div>

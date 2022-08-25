@@ -1,0 +1,28 @@
+<h1>App Component</h1>
+<h2>{{name}}</h2>
+
+<h2>{{name | lowercase}}</h2>
+
+<h2>{{name | uppercase}}</h2>
+
+<h2>{{name | slice:0:8}}</h2>
+
+<h2>{{statement | titlecase}}</h2>
+
+
+
+<p>{{emp | json}}</p>
+
+<p>{{0.25 | currency}}</p>
+<p>{{0.25 | currency: 'GBP'}}</p>
+<p>{{0.25 | currency: 'INR'}}</p>
+
+<p>{{0.25 | percent}}</p>
+
+<p>{{0.13 | double | percent}}</p>
+
+<p>{{dob | date:"MM/dd/yyyy"}}</p>
+
+
+
+<!-- <app-test [phoneChild]="phoneParent" (childEvent)="message=$event"></app-test> -->

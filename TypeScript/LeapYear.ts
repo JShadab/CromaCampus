@@ -12,18 +12,31 @@ const rl = readline.createInterface({
 rl.question("Enter year of your choice? ", function (answer: number) {
     console.log(`Oh, so your year is ${answer}`);
 
-    checkLeapYear(answer);
+    let isLeap = checkLeapYear(answer);
+    if (isLeap) {
+        console.log(answer + " is a leap year");
 
-    console.log("Closing the interface");
+    } else {
+        console.log(answer + " is not a leap year");
+    }
+
+    console.log("Bye");
     rl.close();
 });
 
 function checkLeapYear(year: number) {
 
+    let isLeap = false;
+    if (year % 4 == 0) {
+        
+        if (year % 100 == 0 && year % 400 != 0) {
+            return isLeap;
+        }
+        isLeap = true;
 
-    //Code
+    }
+    return isLeap;
 
-    console.log("Its is Leap year ");
 }
 
 

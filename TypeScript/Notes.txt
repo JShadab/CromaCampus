@@ -26,6 +26,26 @@ Version 4.7.4
 
 > tsc main.js --watch
 
+------------------------------------
+-> When we install any package using npm command, its create a directoy 'node_modules' and put all the libraries inside
+the node_modules directoy. So with the time size of this directoy grows upto GBs.
+
+Its recommmend never share/push this directory, SO what?
+
+For Git:
+----------
+1. create a special file '.gitignore' and provide the path of node_modules directoy i.e.
+        TypeScript/node_modules/
+
+2.  git add -> git commit -> git push
+
+3. When the code is in your machine, move to the folder where you have 'package.json' and type below command:
+
+    > npm install   OR > npm update
+
+4. Happy Coding......
+
+
 
 1. Given a year, report if it is a leap year.
 
@@ -53,3 +73,5 @@ Here are some examples:
 Name	String to return
 Alice	One for Alice, one for me.
 Bob	One for Bob, one for me.
+
+

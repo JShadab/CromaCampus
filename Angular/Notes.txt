@@ -1,0 +1,21 @@
+How to install Angular CLI tool in out system:
+-----------------------------------------------
+> npm install -g @angular/cli
+
+How to check Angular CLI installed version:
+-----------------------------------------------
+> ng version
+
+How to create a new angular application:
+-----------------------------------------
+> ng new <app-name>
+
+How to run an angular application:
+-----------------------------------------
+a) > ng serve
+b) > ng serve -o
+c) > npm start
+
+---------------------------------------------------
+Dependency Injection(DI):
+-----------------------------

@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div *ngFor="let color of colors; even as f">
+        <h3 [style.color]="color"> {{f}} {{color}}</h3>
+    </div>
+
+</div>
+<hr>
+
+<div class="container">
+
+    <div [ngSwitch]="day">
+
+        <h1 *ngSwitchCase="1"> Today is Monday</h1>
+        <h1 *ngSwitchCase="2"> Today is Tuesday</h1>
+        <h1 *ngSwitchCase="3"> Today is Wednesday</h1>
+        <h1 *ngSwitchCase="4"> Today is Thursday</h1>
+        <h1 *ngSwitchCase="5"> Today is Friday</h1>
+        <h1 *ngSwitchCase="6"> Today is Saturday</h1>
+        <h1 *ngSwitchCase="7"> Today is Sunday</h1>
+        <h1 *ngSwitchDefault> Are u crazy!!!!!</h1>
+    </div>
+
+</div>
+<hr>
+<div class="container">
+
+    <!-- <h1 *ngIf="isShow; else elseBlock">
+        Welcome to CromaCampus
+    </h1> -->
+
+    <div *ngIf="isShow; then thenBlock; else elseBlock">
+
+    </div>
+
+    <ng-template #thenBlock>
+        <h1>
+            Hello
+        </h1>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <h1>
+            Bye
+        </h1>
+    </ng-template>
+
+    <button (click)="showHide()">Show/Hide</button>
+
+
+</div>

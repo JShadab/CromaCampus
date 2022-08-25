@@ -1,0 +1,15 @@
+<h1>Employee Details</h1>
+{{errMessage}}
+
+<ul>
+    <li *ngFor="let emp of empArr">
+        {{emp.id}}, {{emp.name}}, {{emp.age}}, {{emp.salary}},
+    </li>
+</ul>
+
+<div>
+    <button (click)="postData()"> POST</button>
+    <button (click)="putData()"> PUT</button>
+    <button (click)="deleteData()"> DELETE</button>
+    <button (click)="getData()"> GET</button>
+</div>

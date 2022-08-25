@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var Employee_1 = require("./Employee");
+var Manager_1 = require("./Manager");
+var emp = new Employee_1.Employee('Musa');
+console.log(emp.employeeName);
+emp.greet();
+var mgr = new Manager_1.Manager('Musa');
+console.log(mgr.employeeName);
+mgr.greet();
+mgr.assignTask();
